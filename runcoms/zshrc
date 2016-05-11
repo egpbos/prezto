@@ -11,6 +11,3 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-
-# added by Miniconda2 4.0.5 installer (in .bashrc, niet hier, zelf gedaan!)
-export PATH="/home/patrick/miniconda2/bin:$PATH"
