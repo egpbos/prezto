@@ -10,5 +10,5 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-# added by Miniconda2 4.0.5 installer (in .bashrc, niet hier, zelf gedaan!)
-export PATH="/home/patrick/miniconda2/bin:$PATH"
+# lokale sw dir
+export PATH=$HOME/sw/bin:$PATH
