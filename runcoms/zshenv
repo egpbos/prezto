@@ -12,3 +12,5 @@ fi
 
 # lokale sw dir
 export PATH=$HOME/sw/bin:$PATH
+# conda
+export PATH=/user/pbos/miniconda2/bin:$PATH
