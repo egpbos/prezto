@@ -14,7 +14,6 @@ fi
 
 # Aliases
 alias rm='nocorrect rm -I'
-alias thesis="cd ~/thesis; source activate cosmo"
 
 # turn off noclobber
 setopt clobber
