@@ -17,3 +17,7 @@ alias rm='nocorrect rm -I'
 
 # turn off noclobber
 setopt clobber
+
+# added by Miniconda3 4.3.11 installer
+# (in .bash_profile, moved here by me)
+export PATH="/Users/pbos/sw/miniconda3/bin:$PATH"
