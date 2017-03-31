@@ -13,7 +13,8 @@ fi
 # Customize to your needs...
 
 # Aliases
-alias rm='nocorrect rm -I'
+#alias rm='nocorrect rm -I'
+alias rm='nocorrect rm'
 
 # turn off noclobber
 setopt clobber
@@ -21,3 +22,6 @@ setopt clobber
 # added by Miniconda3 4.3.11 installer
 # (in .bash_profile, moved here by me)
 export PATH="/Users/pbos/sw/miniconda3/bin:$PATH"
+
+# macports
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
