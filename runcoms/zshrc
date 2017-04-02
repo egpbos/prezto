@@ -21,7 +21,8 @@ setopt clobber
 
 # added by Miniconda3 4.3.11 installer
 # (in .bash_profile, moved here by me)
-export PATH="/Users/pbos/sw/miniconda3/bin:$PATH"
+#export PATH="/Users/pbos/sw/miniconda3/bin:$PATH"
+# moved paths to zprofile path list!
 
 # macports
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
