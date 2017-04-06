@@ -123,6 +123,8 @@ alias gpA='git push --all && git push --tags'
 alias gpt='git push --tags'
 alias gpc='git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'
 alias gpp='git pull origin "$(git-branch-current 2> /dev/null)" && git push origin "$(git-branch-current 2> /dev/null)"'
+# print size in bytes of push bundle of current branch without actually pushing
+alias gpS='echo $(git bundle create - "^origin/$(git-branch-current 2> /dev/null)" "$(git-branch-current 2> /dev/null)" 2> /dev/null | wc -c)'
 
 # Rebase (r)
 alias gr='git rebase'
