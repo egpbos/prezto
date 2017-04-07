@@ -26,3 +26,7 @@ setopt clobber
 
 # macports
 #export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+# ROOT loading
+alias apcocsm_root_debug='source /Users/pbos/projects/apcocsm/root-roofit-dev/cmake-build-debug/bin/thisroot.sh'
+
