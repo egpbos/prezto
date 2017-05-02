@@ -42,12 +42,25 @@ typeset -gU cdpath fpath mailpath path
 # )
 
 # Set the list of directories that Zsh searches for programs.
-path=(
-  /Users/pbos/sw/miniconda3/bin
-  /opt/local/{bin,sbin}
-  /usr/local/{bin,sbin}
-  $path
-)
+# host dependent
+case $HOST in
+  (ESLT0072)
+    path=(
+      /Users/pbos/sw/miniconda3/bin
+      /opt/local/{bin,sbin}
+      /usr/local/{bin,sbin}
+      $path
+    )
+  ;;
+  (*)
+    path=(
+      /user/pbos/miniconda2/bin
+      $HOME/sw/bin
+      /usr/local/{bin,sbin}
+      $path
+    )
+  ;;
+esac
 
 #
 # Less
@@ -74,3 +87,12 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+# host dependent things
+case $HOST in
+  (stbc-i*)
+    # ssh agent for github and bitbucket
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_rsa_github
+  ;;
+esac
