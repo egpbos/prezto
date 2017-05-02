@@ -17,3 +17,10 @@ alias rm='nocorrect rm -I'
 
 # turn off noclobber
 setopt clobber
+
+# lsetup stuff on stoomboot
+source /project/atlas/nikhef/cvmfs/setup.sh
+setupATLAS
+
+# git
+lsetup git
