@@ -13,6 +13,8 @@ export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir vcs)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 
 export POWERLEVEL9K_MODE='nerdfont-complete'
+# needed to suppress warning at stoomboot:
+export TERM="xterm-256color"
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -45,7 +47,8 @@ case $HOST in
   (stbc-i*)
     # lsetup stuff on interactive stoomboot nodes
     source /project/atlas/nikhef/cvmfs/setup.sh
-    setupATLAS
+    # setupATLAS (the alias doesn't seem to work from .zshrc):
+    source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
     # git
     lsetup git
   ;;
