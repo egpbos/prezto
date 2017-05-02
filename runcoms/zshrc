@@ -9,12 +9,17 @@
 # some things, like the _MODE variable, need to be set before loading the theme through prezto!
 export DEFAULT_USER=pbos
 
-export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir vcs)
+export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context ssh dir anaconda vcs)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 
 export POWERLEVEL9K_MODE='nerdfont-complete'
 # needed to suppress warning at stoomboot:
 export TERM="xterm-256color"
+# anaconda
+POWERLEVEL9K_ANACONDA_LEFT_DELIMITER=""
+POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=""
+#POWERLEVEL9K_ANACONDA_BACKGROUND="navy"
+POWERLEVEL9K_ANACONDA_FOREGROUND="white"
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
