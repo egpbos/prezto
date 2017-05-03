@@ -53,9 +53,11 @@ case $HOST in
     # lsetup stuff on interactive stoomboot nodes
     source /project/atlas/nikhef/cvmfs/setup.sh
     # setupATLAS (the alias doesn't seem to work from .zshrc):
-    source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
+    # source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
+    # ... apparently this is not necessary here, we just want git, so do below
     # git
-    lsetup git
+    source $ATLAS_LOCAL_ROOT_BASE/packageSetups/localSetup.sh "git" > /dev/null
+    # this is what `lsetup git` will actually do for you (lsetup is a function)
   ;;
   (*)
     echo "How did I get in the middle of nowhere?"
