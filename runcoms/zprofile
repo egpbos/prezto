@@ -88,11 +88,3 @@ fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
 
-# host dependent things
-case $HOST in
-  (stbc-i*)
-    # ssh agent for github and bitbucket
-    eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/id_rsa_github
-  ;;
-esac
