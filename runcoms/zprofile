@@ -41,7 +41,9 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
+
 # Set the list of directories that Zsh searches for programs.
+# Also the PKGCONFIG path and possibly other environment variables.
 # host dependent
 case $HOST in
   (ESLT0072)
@@ -49,8 +51,11 @@ case $HOST in
       /Users/pbos/sw/miniconda3/bin
       /opt/local/{bin,sbin}
       /usr/local/{bin,sbin}
+      /Users/pbos/sw/bin
       $path
     )
+    export PKG_CONFIG_PATH=$HOME/sw/lib/pkgconfig
+    export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
   ;;
   (*)
     path=(

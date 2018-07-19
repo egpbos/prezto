@@ -55,6 +55,9 @@ case $HOST in
   (ESLT0072)
     # ROOT loading
     alias apcocsm_root_debug='source /Users/pbos/projects/apcocsm/root-roofit-dev/cmake-build-debug/bin/thisroot.sh'
+    # Custom Python paths
+    export PYTHONPATH="/Users/pbos/code/python_modules"
+    alias pybarcode='export PYTHONPATH="/Users/pbos/code/barcoding/python:$PYTHONPATH"'
   ;;
   (stbc-i*)
     # lsetup stuff on interactive stoomboot nodes
