@@ -57,9 +57,16 @@ case $HOST in
     export PKG_CONFIG_PATH=$HOME/sw/lib/pkgconfig
     export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
   ;;
+  (mlp*)
+    path=(
+      $HOME/sw/bin
+      $HOME/sw/miniconda2/bin
+      $path
+    )
+  ;;
   (*)
     path=(
-      /user/pbos/miniconda2/bin
+      $HOME/miniconda2/bin
       $HOME/sw/bin
       /usr/local/{bin,sbin}
       $path
