@@ -70,6 +70,8 @@ case $HOST in
     source $ATLAS_LOCAL_ROOT_BASE/packageSetups/localSetup.sh "git" > /dev/null
     # this is what `lsetup git` will actually do for you (lsetup is a function)
   ;;
+  (mlp*)
+  ;;
   (*)
     echo "How did I get in the middle of nowhere?"
     echo $HOST
