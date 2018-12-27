@@ -51,11 +51,13 @@ case $HOST in
       /Users/pbos/sw/miniconda3/bin
       /opt/local/{bin,sbin}
       /usr/local/{bin,sbin}
+      /Users/pbos/.gem/ruby/2.3.0/bin
       /Users/pbos/sw/bin
       $path
     )
     export PKG_CONFIG_PATH=$HOME/sw/lib/pkgconfig
     export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+    export GEM_HOME=$HOME/.gem/ruby/2.3.0/gems
   ;;
   (mlp*)
     path=(
