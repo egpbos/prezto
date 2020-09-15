@@ -52,7 +52,7 @@ setopt clobber
 
 # host dependent things
 case $HOST in
-  (ESLT0072)
+  (ESLT*)
     # ROOT loading
     alias apcocsm_root_debug='source /Users/pbos/projects/apcocsm/roofit-dev/root/cmake-build-debug/bin/thisroot.sh'
     # Custom Python paths
