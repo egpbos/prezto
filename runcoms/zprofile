@@ -59,6 +59,12 @@ case $HOST in
     export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
     export GEM_HOME=$HOME/.gem/ruby/2.3.0/gems
   ;;
+  (flappi.local)
+    path=(
+      /opt/local/{bin,sbin}
+      $path
+    )
+  ;;
   (mlp*)
     path=(
       $HOME/sw/bin

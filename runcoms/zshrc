@@ -59,6 +59,9 @@ case $HOST in
     export PYTHONPATH="/Users/pbos/code/python_modules"
     alias pybarcode='export PYTHONPATH="/Users/pbos/code/barcoding/python:$PYTHONPATH"'
   ;;
+  (flappi.local)
+    DEFAULT_USER=patrick
+  ;;
   (stbc-i*)
     # lsetup stuff on interactive stoomboot nodes
     source /project/atlas/nikhef/cvmfs/setup.sh
